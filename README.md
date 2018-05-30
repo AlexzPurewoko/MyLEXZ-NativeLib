@@ -1,4 +1,4 @@
-# MyLEXZ-Library v2.4B
+# MyLEXZ-NativeLib v2.4B
 
 Contains any code for managing file, etc. Please use this project for your application!
 
@@ -9,7 +9,7 @@ Contains any code for managing file, etc. Please use this project for your appli
 * Then, go into cmd and go into your project directory
 * Clone my repositories
   ```
-  git clone https://github.com/AlexzPurewoko/MyLEXZ-Library.git MLibrary
+  git clone https://github.com/AlexzPurewoko/MyLEXZ-NativeLib.git MLibrary
   ```
 * wait a few moments, then go into ```MLibrary/jni``` folders
 * Then you see the ```MyLEXZ-Cutils``` empty folders
