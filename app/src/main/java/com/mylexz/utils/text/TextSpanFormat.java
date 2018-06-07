@@ -143,6 +143,7 @@ public final class TextSpanFormat {
                 if(text.charAt(x) == '='){
                     // change TextSize (size)
                     if(op.equalsIgnoreCase(symbol[9])){
+                        x++;
 
                     }
                 }
@@ -207,11 +208,21 @@ public final class TextSpanFormat {
         int method;
         int color;
         String url;
+        float size;
         public SpanMethod(int start, int end, int method, int color, @Nullable String url){
             this.start = start;
             this.end = end;
             this.method = method;
             this.color = color;
+            this.url = url;
+
+        }
+        public SpanMethod(int start, int end, int method, float size){
+            this.start = start;
+            this.end = end;
+            this.method = method;
+            this.color = color;
+            this.size = size;
         }
     }
 }
