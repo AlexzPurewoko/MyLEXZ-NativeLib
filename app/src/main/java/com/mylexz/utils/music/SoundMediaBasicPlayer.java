@@ -69,6 +69,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.content.res.AssetFileDescriptor;
 import java.io.FileInputStream;
+import com.mylexz.utils.R;
 
 public class SoundMediaBasicPlayer implements Closeable, SeekBar.OnSeekBarChangeListener
 {
@@ -331,6 +332,7 @@ public class SoundMediaBasicPlayer implements Closeable, SeekBar.OnSeekBarChange
 	/*
 	 * Play the music programmatically
 	 * causes app crashes if not call setMusic() before playing
+	 * we have been sets for the executor with {@link AsyncTask.THREAD_POOL_EXECUTOR} for executing the multiple playing simultaneously
 	 * @noreturn
 	 */
 	public void playMusic(){
@@ -340,7 +342,7 @@ public class SoundMediaBasicPlayer implements Closeable, SeekBar.OnSeekBarChange
 		mPlayer.setImageResource(iconPauseResId);
 		mMusicPlay.start();
 		mediaProcess = new UpdateMediaProgress();
-		mediaProcess.execute();
+		mediaProcess.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 	}
 	/*
 	 * Pause the music play programmatically
