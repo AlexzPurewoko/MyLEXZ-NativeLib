@@ -1,0 +1,3 @@
+[submodule "src/main/c/MyLEXZ-Cutils"]
+	path = src/main/c/MyLEXZ-Cutils
+	url = https://github.com/AlexzPurewoko/MyLEXZ-Cutils.git
